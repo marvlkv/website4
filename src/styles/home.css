@@ -6,6 +6,8 @@
     --font-logo: "Montagu Slab", serif;
     --light-purple: #EAD4FF;
     --text-color-dark: #000;
+    --admin-light: #f5eaff;
+    --admin-border: #d0b0f0;
 }
 
 body {

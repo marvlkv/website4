@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Панель администратора — TUFT STUDIO</title>
+    <link rel="stylesheet" href="src/styles/admin.css" />
+    <link rel="stylesheet" href="src/styles/home.css" />
+    <link rel="stylesheet" href="src/styles/footer.css" />
+    <link rel="stylesheet" href="src/styles/header.css" />
+  </head>
+  <body>
+    <header class="main-header">
+      <a href="home.html">
+        <div class="logo">TUFT<br />STUDIO</div>
+      </a>
+      <nav class="nav">
+        <a href="#" class="active">Управление</a>
+        <a href="#">Расписание</a>
+        <a href="#">Клиенты</a>
+        <a href="#">Заказы</a>
+        <a href="#">Настройки</a>
+      </nav>
+    </header>
+
+    <div class="admin-container">
+      <div class="admin-sidebar">
+        <h3>Панель управления</h3>
+        <ul class="admin-menu">
+          <li class="active"><a href="#">Мастер-классы</a></li>
+          <li><a href="#">Бронирования</a></li>
+          <li><a href="#">Клиенты</a></li>
+          <li><a href="#">Дизайны</a></li>
+          <li><a href="#">Отчеты</a></li>
+          <li><a href="#">Настройки</a></li>
+        </ul>
+        <div class="admin-stats">
+          <div class="stat-item">
+            <span class="stat-label">Всего бронирований</span>
+            <span class="stat-value">42</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-label">Мастер-классов на неделе</span>
+            <span class="stat-value">9</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-label">Свободных мест</span>
+            <span class="stat-value">14</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="admin-content">
+        <div class="admin-header">
+          <h1>Управление мастер-классами</h1>
+          <button class="admin-button">+ Добавить мастер-класс</button>
+        </div>
+
+        <div class="admin-filters">
+          <div class="filter-group">
+            <label for="format-filter">Формат:</label>
+            <select id="format-filter">
+              <option value="all">Все форматы</option>
+              <option value="group">Групповой</option>
+              <option value="individual">Индивидуальный</option>
+              <option value="kids">Детский</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label for="date-filter">Период:</label>
+            <input type="date" id="date-filter" value="2025-06-04" />
+          </div>
+          <div class="filter-group">
+            <label for="status-filter">Статус:</label>
+            <select id="status-filter">
+              <option value="all">Все статусы</option>
+              <option value="available">Есть места</option>
+              <option value="full">Заполнен</option>
+              <option value="cancelled">Отменен</option>
+            </select>
+          </div>
+          <button class="filter-button">Применить</button>
+        </div>
+
+        <div class="admin-table">
+          <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Дата и время</th>
+                <th>Формат</th>
+                <th>Всего мест</th>
+                <th>Свободно</th>
+                <th>Статус</th>
+                <th>Действия</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1001</td>
+                <td>5 июня 2025, 11:00</td>
+                <td>Групповой</td>
+                <td>6</td>
+                <td>1</td>
+                <td><span class="status-badge available">Есть места</span></td>
+                <td class="actions">
+                  <button class="action-btn edit">✏️</button>
+                  <button class="action-btn view">👁️</button>
+                  <button class="action-btn delete">🗑️</button>
+                </td>
+              </tr>
+              <tr>
+                <td>1002</td>
+                <td>5 июня 2025, 15:00</td>
+                <td>Групповой</td>
+                <td>6</td>
+                <td>2</td>
+                <td><span class="status-badge available">Есть места</span></td>
+                <td class="actions">
+                  <button class="action-btn edit">✏️</button>
+                  <button class="action-btn view">👁️</button>
+                  <button class="action-btn delete">🗑️</button>
+                </td>
+              </tr>
+              <tr>
+                <td>1003</td>
+                <td>5 июня 2025, 15:00</td>
+                <td>Индивидуальный</td>
+                <td>1</td>
+                <td>1</td>
+                <td><span class="status-badge available">Есть места</span></td>
+                <td class="actions">
+                  <button class="action-btn edit">✏️</button>
+                  <button class="action-btn view">👁️</button>
+                  <button class="action-btn delete">🗑️</button>
+                </td>
+              </tr>
+              <tr>
+                <td>1004</td>
+                <td>6 июня 2025, 11:00</td>
+                <td>Индивидуальный</td>
+                <td>1</td>
+                <td>1</td>
+                <td><span class="status-badge available">Есть места</span></td>
+                <td class="actions">
+                  <button class="action-btn edit">✏️</button>
+                  <button class="action-btn view">👁️</button>
+                  <button class="action-btn delete">🗑️</button>
+                </td>
+              </tr>
+              <tr>
+                <td>1005</td>
+                <td>6 июня 2025, 12:00</td>
+                <td>Детский</td>
+                <td>4</td>
+                <td>2</td>
+                <td><span class="status-badge available">Есть места</span></td>
+                <td class="actions">
+                  <button class="action-btn edit">✏️</button>
+                  <button class="action-btn view">👁️</button>
+                  <button class="action-btn delete">🗑️</button>
+                </td>
+              </tr>
+              <tr>
+                <td>1006</td>
+                <td>6 июня 2025, 16:00</td>
+                <td>Детский</td>
+                <td>4</td>
+                <td>1</td>
+                <td><span class="status-badge available">Есть места</span></td>
+                <td class="actions">
+                  <button class="action-btn edit">✏️</button>
+                  <button class="action-btn view">👁️</button>
+                  <button class="action-btn delete">🗑️</button>
+                </td>
+              </tr>
+              <tr>
+                <td>1007</td>
+                <td>7 июня 2025, 13:00</td>
+                <td>Детский</td>
+                <td>4</td>
+                <td>3</td>
+                <td><span class="status-badge available">Есть места</span></td>
+                <td class="actions">
+                  <button class="action-btn edit">✏️</button>
+                  <button class="action-btn view">👁️</button>
+                  <button class="action-btn delete">🗑️</button>
+                </td>
+              </tr>
+              <tr>
+                <td>1008</td>
+                <td>7 июня 2025, 16:00</td>
+                <td>Индивидуальный</td>
+                <td>1</td>
+                <td>1</td>
+                <td><span class="status-badge available">Есть места</span></td>
+                <td class="actions">
+                  <button class="action-btn edit">✏️</button>
+                  <button class="action-btn view">👁️</button>
+                  <button class="action-btn delete">🗑️</button>
+                </td>
+              </tr>
+              <tr>
+                <td>1009</td>
+                <td>8 июня 2025, 11:00</td>
+                <td>Групповой</td>
+                <td>6</td>
+                <td>3</td>
+                <td><span class="status-badge available">Есть места</span></td>
+                <td class="actions">
+                  <button class="action-btn edit">✏️</button>
+                  <button class="action-btn view">👁️</button>
+                  <button class="action-btn delete">🗑️</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="admin-section">
+          <h2>Требования к дизайнам</h2>
+          <div class="design-guidelines">
+            <div class="guideline-item">
+              <h3>Простые формы</h3>
+              <p>
+                Выбирайте дизайны с четкими, жирными формами, которые легко
+                распознать. Простые изображения с четкими контурами и сплошными
+                цветами работают лучше всего.
+              </p>
+            </div>
+            <div class="guideline-item">
+              <h3>Избегайте мелких деталей</h3>
+              <p>
+                Слишком детализированные изображения с мелкими элементами,
+                тонкими узорами или тенями могут потеряться в процессе тафтинга.
+              </p>
+            </div>
+            <div class="guideline-item">
+              <h3>Используйте сплошные цвета</h3>
+              <p>
+                Тафтинг лучше всего работает с сплошными цветами и четкими
+                формами. Фотографии, акварельные картины или изображения с
+                мягкими тенями плохо переводятся в тафтинговый ковер.
+              </p>
+            </div>
+            <div class="guideline-item">
+              <h3>Избегайте тонких линий</h3>
+              <p>
+                Тонкие линии и деликатные детали могут исчезнуть при тафтинге.
+                Мелкий текст также сложно четко оформить.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="main-footer">
+      <div class="contacts-block">
+        <div class="contacts-title">НАШИ КОНТАКТЫ:</div>
+        <div class="contacts-list">
+          <div class="contact-item">+7(123) 456-78-90</div>
+          <div class="contact-item">tuftstudio@gmail.com</div>
+        </div>
+      </div>
+      <div class="work-time-block">
+        <div class="work-time-title">Время работы:</div>
+        <div class="work-time">Пн–Вс с 10:00 до 20:00</div>
+        <div class="address">Московский проспект, 38к4</div>
+      </div>
+      <div class="footer-links">
+        <a href="#" class="privacy-policy">Политика конфиденциальности</a>
+        <span class="copyright">© 2025 TUFT STUDIO/ Все права защищены.</span>
+      </div>
+      <div class="social-icons">
+        <a href="#"
+          ><img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCodCp-cYwcl3YZM49XsRf7VAmUnvJ_y21NQ&s"
+            alt="TG"
+        /></a>
+        <a href="#"
+          ><img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCyYTDsOmWIymToJPu1kAuuh1c-84f5wOQog&s"
+            alt="WhatsApp"
+        /></a>
+        <a href="#"
+          ><img src="https://m.vk.com/images/logos/vklogo_400.png" alt="VK"
+        /></a>
+      </div>
+    </footer>
+  </body>
+</html>
