@@ -1,0 +1,115 @@
+/* :root {
+    --main-purple: #6b29af;
+    --light-purple: #EAD4FF;
+    --text-color-dark: #000;
+    --font-main: 'Montserrat', Arial, sans-serif;
+} */
+
+.workshop-selection {
+    padding: 60px 5% 100px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-family: var(--font-main);
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 60px;
+    color: var(--text-color-dark-dark);
+}
+
+.formats-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.format-column {
+    width: 360px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.format-title {
+    font-family: var(--font-main);
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: var(--text-color-dark);
+    text-align: center;
+}
+
+.format-options {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 100%;
+}
+
+.format-options a {
+    text-decoration: none;
+}
+
+.option-card {
+    background-color: var(--light-purple);
+    border-radius: 20px;
+    padding: 15px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.option-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(107, 41, 175, 0.2);
+}
+
+.option-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.option-info,
+.seats-info {
+    font-family: var(--font-main);
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 35px;
+    color: var(--text-color-dark);
+}
+
+.option-info {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 1200px) {
+    .formats-container {
+        gap: 20px;
+    }
+
+    .format-column {
+        width: 300px;
+    }
+}
+
+@media (max-width: 992px) {
+    .section-title {
+        font-size: 40px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .workshop-selection {
+        padding: 40px 4% 80px;
+    }
+
+    .format-column {
+        width: 100%;
+        max-width: 450px;
+    }
+}

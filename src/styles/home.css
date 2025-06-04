@@ -4,6 +4,8 @@
     --text-color: #fff;
     --font-main: "Montserrat", Arial, sans-serif;
     --font-logo: "Montagu Slab", serif;
+    --light-purple: #EAD4FF;
+    --text-color-dark: #000;
 }
 
 body {

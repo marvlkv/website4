@@ -1,0 +1,133 @@
+body {
+    background-color: #FAF2EB;
+}
+
+.form-section {
+    background: var(--light-purple);
+    border-radius: 20px;
+    width: 427px;
+    max-width: 95vw;
+    margin: 40px auto;
+    padding: 40px 24px 24px 24px;
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-section-title {
+    font-family: var(--font-main);
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--text-color-dark-dark);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.order-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-family: var(--font-main);
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-color-dark);
+    line-height: 20px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="tel"],
+.form-group input[type="email"],
+.form-group input[type="number"] {
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    background: #fff;
+    padding: 0 18px;
+    font-size: 20px;
+    font-family: var(--font-main);
+    font-weight: 600;
+    color: var(--text-color-dark);
+    box-sizing: border-box;
+}
+
+.form-group input[type="number"]::-webkit-inner-spin-button,
+.form-group input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.file-group .file-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.file-group input[type="file"] {
+    display: none;
+}
+
+.file-label {
+    width: 198px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border-radius: 5px;
+    padding-left: 18px;
+    font-size: 20px;
+    font-family: var(--font-main);
+    font-weight: 600;
+    color: #909090;
+    cursor: pointer;
+}
+
+.file-chosen {
+    font-family: var(--font-main);
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text-color-dark);
+    text-align: center;
+    line-height: 35px;
+}
+
+.order-submit {
+    margin-top: 10px;
+    width: 100%;
+    max-width: 228px;
+    align-self: center;
+    height: 40px;
+    padding: 6px 44px;
+    border: none;
+    border-radius: 5px;
+    background: var(--main-purple);
+    color: #fff;
+    font-size: 20px;
+    font-family: var(--font-main);
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.order-submit:hover {
+    background: #4a1b78;
+}
+
+@media (max-width: 600px) {
+    .form-section {
+        width: 100%;
+        padding: 24px 6vw;
+        min-width: unset;
+    }
+}
